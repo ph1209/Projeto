@@ -1,8 +1,18 @@
 <div class="container-fluid">
-  <div class="row">
+  <div class="row linha_login">
     <div class="col-md-3"></div>
     <div class="col-md-6">
       <h1 class="title">Área de acesso</h1>
+      <?php
+        //TRATAMENTO DE ERRO DE LOGIN
+        if(isset($_GET['erro'])){
+          ?>
+            <div class="alert alert-danger" role="alert">
+              Usuário ou senha incorretos.
+            </div>
+          <?php
+        }
+      ?>
       <form action="router.php?controller=login" method="post">
         <div class="form-group">
           <label for="exampleInputEmail1">Endereço de e-mail</label>

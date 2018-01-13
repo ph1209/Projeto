@@ -9,6 +9,8 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-
+    <?php
+      require_once("view/view_system.php");
+     ?>
   </body>
 </html>

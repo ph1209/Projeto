@@ -1,3 +1,7 @@
+/*ÁREA DE ACESSO*/
+.linha_login{
+  margin-top: 20px;
+}
 .title{
   margin: auto;
   text-align: center;
@@ -6,3 +10,24 @@
   margin-left: 25%;
   width: 50%;
 }
+/*ÁREA DE ACESSO -- FINAL*/
+
+/*SISTEMA*/
+.linha_system{
+  margin-top: 30px;
+}
+.txt_area{
+  resize: none;
+}
+.lst_title{
+  text-align: center;
+  border-right: solid 1px;
+}
+.lst_opt{
+  text-align: center;
+}
+.opt{
+  color: #000;
+  text-decoration: none;
+}
+/*SISTTEMA -- FINAL*/
