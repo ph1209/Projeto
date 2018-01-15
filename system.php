@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,8 +9,6 @@
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <?php
-      require_once("view/view_system.php");
-     ?>
+    <?php require_once("view/view_system.php");?>
   </body>
 </html>

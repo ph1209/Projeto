@@ -30,4 +30,10 @@
   color: #000;
   text-decoration: none;
 }
+.btn_voltar{
+  color: red;
+}
+.btn_voltar:hover{
+  color: red;
+}
 /*SISTTEMA -- FINAL*/

@@ -22,7 +22,7 @@
           <label for="exampleInputPassword1">Senha</label>
           <input name="txt_senha" type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
         </div>
-        <button type="submit" class="login_btn btn btn-default" >Entrar</button>
+        <button type="submit" class="login_btn btn btn-default">Entrar</button>
       </form>
     </div>
     <div class="col-md-3"></div>

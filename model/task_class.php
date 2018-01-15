@@ -6,7 +6,7 @@
   class Task{
     public $codigo;
     public $nome;
-    public $descricao
+    public $descricao;
     public $anexo;
 
     public function __construct(){
@@ -18,12 +18,12 @@
       $mysql = new Mysql_db();
       $con = $mysql->conexao;
 
-      $sql = "SELECT * FROM tbl_tasks"
+      $sql = "SELECT * FROM tbl_tasks";
       $select = mysqli_query($con, $sql);
       if(mysqli_num_rows($select)>0){ //VERIFICA SE HÁ ALGO NA TABELA DE TASKS
         $lst_tasks; //CRIA UMA LISTA DE TASKS
         $contador = 0;
-        while (mysqli_fetch_array($select)) {
+        while ($rs = mysqli_fetch_array($select)) {
           $task = new Task(); //CRIA UM NOVO OBJETO TASK
           $task->codigo = $rs['codigo'];
           $task->nome = $rs['nome'];
@@ -69,20 +69,27 @@
     public function editar(){
       $mysql = new Mysql_db();
       $con = $mysql->conexao;
+      if($this->anexo!=null){
+        $sql = "UPDATE tbl_tasks
+        SET nome='".$this->nome."',
+        descricao='".$this->descricao."',
+        arquivo_anexo='".$this->anexo."'
+        WHERE codigo=".$this->codigo;
+      }else{
+        $sql = "UPDATE tbl_tasks
+        SET nome='".$this->nome."',
+        descricao='".$this->descricao."'
+        WHERE codigo=".$this->codigo;
+      }
 
-      $sql = "UPDATE tbl_tasks
-      SET nome='".$this->nome"',
-      descricao='".$this->descricao"',
-      arquivo_anexo='".$this->anexo."'
-      WHERE codigo=".$this->codigo;
       if(mysqli_query($con, $sql)){
         return true;
-      }else {
+      }else{
         return false;
       }
     }
 
-    public function excluir(){
+    public function deletar(){
       $mysql = new Mysql_db();
       $con = $mysql->conexao;
 
