@@ -82,7 +82,8 @@
            $controller = new ControllerTasks();
            $lst_tasks = $controller->listarTasks();
            $contador = 0;
-           while ($contador<sizeof($lst_tasks)) {
+           if(sizeof($lst_tasks)>=1){
+             while ($contador<sizeof($lst_tasks)) {
          ?>
           <li class="list-group-item">
             <div class="container-fluid">
@@ -103,7 +104,8 @@
             </div>
           </li>
         <?php
-            $contador ++;
+              $contador ++;
+            }
           }
          ?>
       </ul>
